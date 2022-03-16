@@ -7,14 +7,12 @@ function App() {
     camera.startCamera();
     camera.takeSnapshot();
 
-    return ( <
-        div className = "App" >
-        <
-        Geo / >
-        <
-        camera / >
-        <
-        /div>
+    return ( 
+    <div className = "App" >
+        <Geo />
+        <camera />
+        
+        </div>
     );
 }
 
