@@ -4,7 +4,7 @@ import Geo from './components/geo';
 function App() {
     return ( 
     <div className = "App" >
-        <Geo / >
+        <Geo />
     </div>
     );
 }
