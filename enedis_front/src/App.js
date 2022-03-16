@@ -1,11 +1,20 @@
 import './App.css';
+import camera from './components/camera'
+
 import Geo from './components/geo';
 
 function App() {
-    return ( 
-    <div className = "App" >
-        <Geo / >
-    </div>
+    camera.startCamera();
+    camera.takeSnapshot();
+
+    return ( <
+        div className = "App" >
+        <
+        Geo / >
+        <
+        camera / >
+        <
+        /div>
     );
 }
 
