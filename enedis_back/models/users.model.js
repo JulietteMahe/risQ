@@ -83,7 +83,9 @@ const destroy=(id)=>{
         return result.affectedRows!==0;
     })
 }
-
+const checkPassword = (plainPassword, hashedPassword) => {
+    return argon2.verify(hashedPassword, plainPassword, hashingOptions);
+}
 
 module.exports ={
     findOneById,
@@ -93,5 +95,6 @@ module.exports ={
     add,
     validate,
     hashPassword,
-    findOneByLogin
+    findOneByLogin,
+    checkPassword
 }
