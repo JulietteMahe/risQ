@@ -15,7 +15,7 @@ const Home = () => {
             <Link to="/camera2">test photo2</Link>
             <Link to="/camera3">test photo3</Link>
             <Link to="/camera4">test photo4</Link>
-      <Navbar />
+            <Navbar />
         </div>
     )
 }
