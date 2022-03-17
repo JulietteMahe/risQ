@@ -1,12 +1,18 @@
-.FormSignal{
-    display: flex;
-    flex-direction: column;
+.FormSignal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--green-400);
 }
 
-.FormSignalLabel{
-    margin : 10px;
+.FormSignalLabel {
+  margin: 10px;
+  width: 100%;
 }
 
-.FormSignalTextAera{
-    margin : 10px;
+.FormSignalTextAera {
+  margin: 10px;
+  width: 100%;
+  min-height: 150px;
 }
