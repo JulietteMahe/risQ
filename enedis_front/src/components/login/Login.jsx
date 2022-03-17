@@ -30,7 +30,7 @@ const Login = () => {
     },
     onSubmit: (values) => {
       axios
-        .post(`${process.env.REACT_APP_API_URL}auth`, values,{withCredentials:true})
+        .post(`${process.env.REACT_APP_API_URL}auth/`, values,{withCredentials:true})
         .then((data) => {
           setUser(data.userId);
           navigator("/");
@@ -38,7 +38,7 @@ const Login = () => {
         .catch(
           (err) => {
             console.log(err);
-            //setError(message);
+            
           }
         );
     },
