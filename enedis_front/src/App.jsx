@@ -15,8 +15,9 @@ import AppWithImageCapture from "./components/AppWithImageCapture";
 import Home from "./pages/Home";
 import OSMap from "./pages/OSMap";
 import Signal from "./pages/Signal";
-// import Nav from "./components/Navbar";
+//import Nav from "./components/Navbar";
 import "./App.css";
+import FormSignal from "./components/formsignal/FormSignal.jsx";
 
 function App() {
   const [latitude, setLatitude] = React.useState("");

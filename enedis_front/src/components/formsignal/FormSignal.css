@@ -1,0 +1,12 @@
+.FormSignal{
+    display: flex;
+    flex-direction: column;
+}
+
+.FormSignalLabel{
+    margin : 10px;
+}
+
+.FormSignalTextAera{
+    margin : 10px;
+}
