@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { MapCoordContext } from  "./context/MapCoordContext.js";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CameraPage1 from './pages/CameraPage1';
 import CameraPage2 from './pages/CameraPage2';
@@ -8,7 +9,17 @@ import Signal from './pages/Signal';
 import './App.css';
 
 function App() {
+    const [latitude, setLatitude] = React.useState('');
+    const [longitude, setLongitude] = React.useState('');
+
+    React.useEffect(() => {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            setLatitude(position.coords.latitude);
+            setLongitude(position.coords.longitude);
+        });
+      }, []);
     return (
+        <MapCoordContext.Provider value={{latitude, longitude}} >
         <div className="App" >
             <BrowserRouter>
                 <Routes>
@@ -20,6 +31,7 @@ function App() {
                 </Routes>
             </BrowserRouter>
         </div>
+        </MapCoordContext.Provider>
     );
 }
 

@@ -6,6 +6,7 @@ function Signal() {
   return (
     <div className="Signal">
       <div className="signalContainer">
+        
         <BasicMap />
       </div>
     </div>
