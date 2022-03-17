@@ -1,7 +1,7 @@
-import Map from '../components/basicmap/Map';
-import FormSignal from '../components/formsignal/FormSignal';
-import Navbar from '../components/Navbar';
-import './Signal.css';
+import React from "react";
+import Map from "../components/basicmap/Map";
+import FormSignal from "../components/formsignal/FormSignal";
+import "./Signal.css";
 
 function Signal() {
   return (
@@ -10,7 +10,6 @@ function Signal() {
         <FormSignal />
         <Map />
       </div>
-      <Navbar />
     </div>
   );
 }

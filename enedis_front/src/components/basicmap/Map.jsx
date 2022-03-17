@@ -2,20 +2,20 @@ import React from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import Markers from "./Markers";
 import visitorIcon from "./constants";
-import 'leaflet/dist/leaflet.css';
+import "leaflet/dist/leaflet.css";
 
 const Map = () => {
-    function LocationMarker() {
-        const [position, setPosition] = React.useState(null);
+  function LocationMarker() {
+    const [position, setPosition] = React.useState(null);
 
-        const map = useMap();
+    const map = useMap();
 
-        React.useEffect(() => {
-            map.locate().on("locationfound", function (e) {
-                setPosition(e.latlng);
-                map.flyTo(e.latlng, 12); //map.getZoom());
-            });
-        }, []);
+    React.useEffect(() => {
+      map.locate().on("locationfound", function (e) {
+        setPosition(e.latlng);
+        map.flyTo(e.latlng, 12); //map.getZoom());
+      });
+    }, []);
 
         return position === null ? null : (
             <Marker position={position} icon={visitorIcon}>
@@ -37,5 +37,6 @@ const Map = () => {
             <LocationMarker />
         </MapContainer>
     );
-}
-export default Map
+  }
+    
+export default Map;
