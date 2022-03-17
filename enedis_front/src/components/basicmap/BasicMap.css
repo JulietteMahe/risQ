@@ -7,20 +7,6 @@
     justify-content: center;
 }
 
-.col {
-    height: 90vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
-}
-
-.leaflet-container {
-    height: 600px;
-    width: 600px;
-}
-
 .leaflet-pane {
     height: 100%;
     width: auto;
