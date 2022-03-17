@@ -1,5 +1,6 @@
 import React from 'react';
 import BasicMap from '../components/basicmap/BasicMap';
+import Navbar from '../components/Navbar';
 import './Signal.css';
 
 function Signal() {
@@ -9,6 +10,7 @@ function Signal() {
         
         <BasicMap />
       </div>
+      <Navbar />
     </div>
   );
 }
