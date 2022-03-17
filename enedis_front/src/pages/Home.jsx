@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Geo from '../components/Geo';
-import Navbar from '../components/Navbar';
+// import Navbar from '../components/Navbar';
 import Fondamentaux from './Fondamentaux.jsx';
 import './Home.css';
 
@@ -18,6 +18,7 @@ const Home = () => {
             <li><Link to="/camera3">test photo3</Link></li>
             <li><Link to="/camera4">test photo4</Link></li>
             <li><Link to="/osmap">test map</Link></li>
+            <li><Link to="/camera4">test photo4</Link></li>
             </ul>
         </div>
     )
