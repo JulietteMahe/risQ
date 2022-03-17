@@ -3,6 +3,7 @@ import { Marker, Popup } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-markercluster";
 import visitorIcon from "./constants";
 import 'leaflet/dist/leaflet.css';
+import 'react-leaflet-markercluster/dist/styles.min.css'
 import axios from "axios";
 
 // Message ou Type_problem ?
