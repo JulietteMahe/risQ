@@ -17,6 +17,7 @@ import OSMap from "./pages/OSMap"
 import Signal from "./pages/Signal";
 // import Nav from "./components/Navbar";
 import "./App.css";
+import FormSignal from "./components/formsignal/FormSignal.jsx";
 
 function App() {
   const [latitude, setLatitude] = React.useState("");
@@ -49,6 +50,8 @@ function App() {
               <Route path="/camera4" element={<AppWithImageCapture />} />
               <Route path="/osmap" element={<OSMap />} />
               <Route path="/signal" element={<Signal />} />
+              {/* Remove this route */}
+              <Route path="/testGC" element={<FormSignal />} /> 
             </Routes>
           </BrowserRouter>
         </UserProvider>

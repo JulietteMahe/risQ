@@ -49,8 +49,10 @@ const findOne=(id)=>{
 
 const create=(data)=>{
     const {longitude,latitude,state,message,type_problem,creator,date_creation,date_update,path}=data;
+    const typeP=parseInt(type_problem);
+
     return db
-        .query("INSERT INTO problems (latitude,longitude,type_problem,photo,creator,state,date_creation,date_update,message) VALUES (?,?,?,?,?,?,?,?,?)",[latitude,longitude,type_problem,path,creator,state,date_creation,date_update,message])
+        .query("INSERT INTO problems (latitude,longitude,type_problem,photo,creator,state,date_creation,date_update,message) VALUES (?,?,?,?,?,?,?,?,?)",[latitude,longitude,typeP,path,creator,state,date_creation,date_update,message])
         .then(([result])=>{
             return result.insertId;
         })
