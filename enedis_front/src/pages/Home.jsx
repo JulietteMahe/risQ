@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Geo from '../components/Geo';
-// import Navbar from '../components/Navbar';
+import Navbar from '../components/Navbar';
 import Fondamentaux from './Fondamentaux.jsx';
 import './Home.css';
 

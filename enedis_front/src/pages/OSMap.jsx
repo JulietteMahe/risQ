@@ -4,7 +4,7 @@ import './OSMap.css';
 
 const OSMap = () => {
   return (
-    <div className="markercluster-map">
+    <div className="osmap_page">
       <Map />
     </div>
   );
