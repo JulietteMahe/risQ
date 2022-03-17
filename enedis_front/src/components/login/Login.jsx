@@ -12,8 +12,8 @@ const Login = () => {
 
   const formik = useFormik({
     initialValues: {
-      login: "",
-      password: "",
+      login: " ",
+      password: " ",
     },
     validateOnChange: false,
     validate: (values) => {

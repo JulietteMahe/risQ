@@ -1,7 +1,6 @@
 import React from "react";
-import BasicMap from "../components/basicmap/BasicMap";
+import Map from "../components/basicmap/Map";
 import FormSignal from "../components/formsignal/FormSignal";
-import Navbar from "../components/Navbar";
 import "./Signal.css";
 
 function Signal() {
@@ -9,9 +8,8 @@ function Signal() {
     <div className="Signal">
       <div className="signalContainer">
         <FormSignal />
-        <BasicMap />
+        <Map />
       </div>
-      <Navbar />
     </div>
   );
 }
