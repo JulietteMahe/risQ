@@ -17,6 +17,14 @@ const validate = (data, forCreation = true) => {
     }).validate(data, { abortEarly: false }).error;
 }
 
+const validateCoord = (data, forCreation = true) => {
+    const presence = forCreation ? 'required' : 'optional';
+    return Joi.object({
+        latitude:Joi.number().presence(presence),
+        longitude:Joi.number().presence(presence)
+    }).validate(data, { abortEarly: false }).error;
+}
+
 const findAll=()=>{
     return db
         .query("SELECT * FROM view_problem")
@@ -78,5 +86,6 @@ module.exports={
     create,
     update,
     destroy,
-    validate
+    validate,
+    validateCoord
 }

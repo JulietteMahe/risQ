@@ -4,9 +4,34 @@ const multer = require('multer');
 
 const upload = multer({ dest: 'uploads' });
 
+const deg2rad=(deg)=>{
+    const pi=Math.PI;
+    return deg*(pi/180);
+}
 router.get('/',async(req,res)=>{
     const result=await problem.findAll();
     return res.status(200).json(result);
+})
+
+router.get('/locate/',async(req,res)=>{
+    //get longitude and latitude from req.
+    const {longitude,latitude}=req.body;
+    const errors=problem.validateCoord( {longitude,latitude});
+    if (errors){
+        return res.sendStatus(500);
+    }
+    else{
+        //Calculate position and array around r km
+        const r=30; //search around r km
+        const R=6371; //Earth Diameter
+        const dLat= 360*r/R//DY
+        const dLong=dLat*Math.cos(deg2rad(latitude));
+        const minLat=latitude-dLat;
+        const maxLat=latitude+dLat;
+        const minLon=longitude-dLong;
+        const maxLong=longitude+dLong;
+        
+    }
 })
 
 router.get('/:id',async(req,res)=>{
