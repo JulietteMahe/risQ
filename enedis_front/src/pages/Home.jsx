@@ -25,6 +25,7 @@ const Home = () => {
             <li><Link to="/camera3">test photo3</Link></li>
             <li><Link to="/camera4">test photo4</Link></li>
             <li><Link to="/osmap">test map</Link></li>
+            <li><Link to="/camera4">test photo4</Link></li>
             </ul>
 >>>>>>> 8cd47f73bed85c197d44b81588814d8a2a148b9c
         </div>
