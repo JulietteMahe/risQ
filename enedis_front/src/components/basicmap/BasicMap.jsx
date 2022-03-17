@@ -17,6 +17,7 @@ const BasicMap = () => {
     const [center, setCenter] = useState({lat: 48.52, lng: 2.19});
     const ZOOM_LEVEL = 9;
     const mapRef = useRef();
+    
 
     return(
         <div className="BasicMap">
@@ -31,8 +32,8 @@ const BasicMap = () => {
                 >
                     <TileLayer url={osm.maptiler.url} attribution={osm.maptiler.attribution} />
                     <Marker 
-                    
                     position={center}
+                    
                     >
                         <Popup>
                             Le risque se situe ici

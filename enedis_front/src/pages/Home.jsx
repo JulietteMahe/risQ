@@ -1,20 +1,18 @@
+
 import React from 'react';
-import camera from '../components/camera';
+import { Link } from 'react-router-dom';
 import Geo from '../components/Geo';
 import './Home.css';
 
-function Home() {
-    camera.startCamera();
-    camera.takeSnapshot();
-
-  return (
-    <div className="Home">
-      <div className="homeContainer">
-      <camera />
-        <Geo />         
-      </div>
-    </div>
-  );
+const Home = () => {
+    return (
+        <div>
+            <Geo />
+            <Link to="/camera1">test photo1</Link>
+            <Link to="/camera2">test photo2</Link>
+            <Link to="/camera3">test photo3</Link>
+        </div>
+    )
 }
 
 export default Home;
