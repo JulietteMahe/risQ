@@ -27,6 +27,8 @@ app.use(cookieParser());
 app.use(cors(corsOptions));
 app.use('/api', router);
 
+app.use('/uploads',express.static('uploads'));
+
 app.get("/", (req, res) => {
     res.send("Welcome");
 });
