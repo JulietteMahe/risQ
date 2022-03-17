@@ -10,6 +10,7 @@
   text-decoration: none;
   color: white;
   z-index: 100;
+  position: fixed;
 }
 
 /* .navbar span {
@@ -30,9 +31,8 @@
 }
 
 .navbarImgContainer {
-  height: 8vh;
+  height: 4vh;
   width: auto;
-  padding-top: 1vh;
 }
 
 .navbarLogo {

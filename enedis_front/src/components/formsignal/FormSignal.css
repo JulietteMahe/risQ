@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   background-color: var(--green-400);
+  padding-bottom: 50px;
 }
 
 .FormSignalLabel {

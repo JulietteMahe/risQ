@@ -35,14 +35,16 @@ const Register = () => {
     },
     onSubmit: (values) => {
       axios
-        .post(`${process.env.REACT_APP_API_URL}/users/`, values)
-        .then(({ data: { credential } }) => {
-          setUser({
+        .post(`${process.env.REACT_APP_API_URL}users/`, values,{withCredentials:true})
+        .then((data) => {
+          console.log(data);
+          /*setUser({
             token: credential,
-          });
+          });*/
           navigator("/");
         })
         .catch((err) => {
+          console.log(err);
           setError(err.response.data.message);
         });
     },

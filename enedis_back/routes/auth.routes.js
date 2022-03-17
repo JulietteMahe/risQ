@@ -22,6 +22,9 @@ router.post('/',async(req,res)=>{
             return res.sendStatus(500);
         }
     }
+    else{
+        return res.sendStatus(404);
+    }
 });
 
 router.post('/logout/',async(req,res)=>{
