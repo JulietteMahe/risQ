@@ -12,7 +12,7 @@ const Geo = () => {
       }, []);
 
     return (
-        <div>
+        <div className="geo">
             <h4>Using geolocation JavaScript API in React</h4>
             <p>Latitude: {latitude}</p>
             <p>Longitude: {longitude}</p>

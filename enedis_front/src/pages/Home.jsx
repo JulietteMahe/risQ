@@ -2,11 +2,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Geo from '../components/Geo';
+import Navbar from '../components/Navbar';
+import Fondamentaux from './Fondamentaux.jsx';
 import './Home.css';
 
 const Home = () => {
     return (
-        <div>
+        <div className='home'>
+            <Fondamentaux />
             <Geo />
             <ul>
             <li><Link to="/camera1">test photo1</Link></li>
