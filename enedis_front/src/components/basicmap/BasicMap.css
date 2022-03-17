@@ -1,4 +1,5 @@
 .BasicMap {
+<<<<<<< HEAD
     height: 70vw;
     width: 90vw;
     display: flex;
@@ -11,3 +12,17 @@
     height: 70vw;
     width: auto;
 }
+=======
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.leaflet-pane {
+  height: 100%;
+  width: auto;
+}
+>>>>>>> 8cd47f73bed85c197d44b81588814d8a2a148b9c
