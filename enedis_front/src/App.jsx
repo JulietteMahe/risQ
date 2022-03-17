@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { MapCoordContext } from  "./context/MapCoordContext.js";
+import { MapCoordContext } from "./context/MapCoordContext.js";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import CameraPage1 from './pages/CameraPage1';
 import CameraPage2 from './pages/CameraPage2';
@@ -18,21 +18,21 @@ function App() {
             setLatitude(position.coords.latitude);
             setLongitude(position.coords.longitude);
         });
-      }, []);
+    }, []);
     return (
-        <MapCoordContext.Provider value={{latitude, longitude}} >
-        <div className="App" >
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/camera1" element={<CameraPage1 />} />
-                    <Route path="/camera2" element={<CameraPage2 />} />
-                    <Route path="/camera3" element={<CameraPage3 />} />
-                    <Route path="/camera4" element={<AppWithImageCapture />} />
-                    <Route path='/signal' element={<Signal />}/>
-                </Routes>
-            </BrowserRouter>
-        </div>
+        <MapCoordContext.Provider value={{ latitude, longitude }} >
+            <div className="App" >
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/camera1" element={<CameraPage1 />} />
+                        <Route path="/camera2" element={<CameraPage2 />} />
+                        <Route path="/camera3" element={<CameraPage3 />} />
+                        <Route path="/camera4" element={<AppWithImageCapture />} />
+                        <Route path='/signal' element={<Signal />} />
+                    </Routes>
+                </BrowserRouter>
+            </div>
         </MapCoordContext.Provider>
     );
 }
