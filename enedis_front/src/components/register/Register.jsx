@@ -1,13 +1,12 @@
 import { useFormik } from "formik";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import { useUser } from "../../contexts/UserProvider";
-import "../../pages/connexion/Connexion.css";
 
-const Login = () => {
-  const [error, setError] = useState(null);
+const Register = () => {
   const navigator = useNavigate();
+  const [error, setError] = useState("");
   const { setUser } = useUser();
 
   const formik = useFormik({
@@ -18,49 +17,49 @@ const Login = () => {
     validateOnChange: false,
     validate: (values) => {
       const errors = {};
+
       if (!values.login) {
-        errors.login = "Requis";
+        errors.login = "Required";
       }
+      // } else if (
+      //   !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+      // ) {
+      //   errors.email = "Invalid email address";
+      // }
 
       if (!values.password) {
-        errors.password = "Requis";
+        errors.password = "Required";
       }
 
       return errors;
     },
     onSubmit: (values) => {
       axios
-        .post(`${process.env.REACT_APP_API_URL}/users/login`, values)
-        .then(({ data: { credentials } }) => {
+        .post(`${process.env.REACT_APP_API_URL}/users/`, values)
+        .then(({ data: { credential } }) => {
           setUser({
-            token: credentials,
+            token: credential,
           });
           navigator("/");
         })
-        .catch(
-          ({
-            response: {
-              data: { message },
-            },
-          }) => {
-            setError(message);
-          }
-        );
+        .catch((err) => {
+          setError(err.response.data.message);
+        });
     },
   });
 
   return (
-    <div className="login-form">
-      <h1>Connexion</h1>
+    <div className="register-form">
+      <h1>Créer un compte</h1>
       <p className="error">{error}</p>
       <form onSubmit={formik.handleSubmit}>
-        <label className="login-label" htmlFor="login">
+        <label htmlFor="login">
           Utilisateur
           {formik.errors.login ? (
             <div className="error">{formik.errors.login}</div>
           ) : null}
           <input
-            className="login-input"
+            className="register-input"
             id="login"
             name="login"
             type="login"
@@ -68,13 +67,13 @@ const Login = () => {
             value={formik.values.login}
           />
         </label>
-        <label className="login-label" htmlFor="password">
+        <label htmlFor="password">
           Mot de passe
           {formik.errors.password ? (
             <div className="error">{formik.errors.password}</div>
           ) : null}
           <input
-            className="login-input"
+            className="register-input"
             id="password"
             name="password"
             type="password"
@@ -82,12 +81,12 @@ const Login = () => {
             value={formik.values.password}
           />
         </label>
-        <button className="login-button" type="submit">
-          Entrer
+        <button className="register-button" type="submit">
+          Envoyer
         </button>
       </form>
     </div>
   );
 };
 
-export default Login;
+export default Register;
