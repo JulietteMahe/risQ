@@ -6,8 +6,7 @@ import './Signal.css';
 function Signal() {
   return (
     <div className="Signal">
-      <div className="signalContainer">
-        
+      <div className="signalContainer">        
         <BasicMap />
       </div>
       <Navbar />
