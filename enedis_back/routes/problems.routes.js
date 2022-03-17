@@ -1,5 +1,8 @@
 const router = require('express').Router();
 const problem=require('../models/problems.model');
+const multer = require('multer');
+
+const upload = multer({ dest: 'uploads' });
 
 router.get('/',async(req,res)=>{
     const result=await problem.findAll();
@@ -14,8 +17,19 @@ router.get('/:id',async(req,res)=>{
         return res.sendStatus(404);
 })
 
-router.post('/',async(req,res)=>{
-    
+router.post('/',upload.single('photo'),async(req,res)=>{
+    const path = req.file.path;
+    const errors=problem.validate(req.body);
+    if(errors){
+        return res.status(422).json({ validationErrors: errors.details });
+    }
+    const result=await problem.create({...req.body,path});
+    if(result){
+        return res.status(201).json({...req.body,path,result});
+    }
+    else{
+        return res.sendStatus(500);
+    }
 })
 
 router.put('/:id',async(req,res)=>{

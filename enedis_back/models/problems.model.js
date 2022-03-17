@@ -13,7 +13,7 @@ const validate = (data, forCreation = true) => {
         state:Joi.number().integer().presence(presence),
         date_creation:Joi.date().presence(presence),
         date_update:Joi.date().presence(presence),
-        message:Joi.string.presence(presence)
+        message:Joi.string().presence(presence)
     }).validate(data, { abortEarly: false }).error;
 }
 
@@ -33,11 +33,15 @@ const findOne=(id)=>{
         })
 }
 
-const create=()=>{
+const create=(data)=>{
+    const {longitude,latitude,photo,state,message,type_problem,creator,date_creation,date_update,path}=data;
     return db
-        .query("",[])
+        .query("INSERT INTO problems (latitude,longitude,type_problem,photo,creator,state,date_creation,date_update,message) VALUES (?,?,?,?,?,?,?,?,?)",[latitude,longitude,type_problem,path,creator,state,date_creation,date_update,message])
         .then(([result])=>{
-            return result.affectedRows!==0;
+            return result.insertId;
+        })
+        .catch((err)=>{
+            console.log(err);
         })
 }
 
@@ -61,5 +65,6 @@ module.exports={
     findOne,
     create,
     update,
-    destroy
+    destroy,
+    validate
 }
