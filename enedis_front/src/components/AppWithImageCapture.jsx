@@ -12,7 +12,7 @@ export default function AppWithImageCapture() {
                 isImageMirror={false}
                 isFullScreen={true}
                 isMaxResolution={true}
-                isSilentMode={true}
+                isSilentMode={false}
                 // idealResolution={{
                 //     width: 3024,
                 //     height: 4032
