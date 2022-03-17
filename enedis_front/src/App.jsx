@@ -13,8 +13,9 @@ import CameraPage2 from "./pages/CameraPage2";
 import CameraPage3 from "./pages/CameraPage3";
 import AppWithImageCapture from "./components/AppWithImageCapture";
 import Home from "./pages/Home";
+import OSMap from "./pages/OSMap"
 import Signal from "./pages/Signal";
-import Nav from "./components/Navbar";
+// import Nav from "./components/Navbar";
 import "./App.css";
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
       <div className="App">
         <UserProvider>
           <BrowserRouter>
-            <Nav />
+            {/* <Nav /> */}
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
@@ -46,6 +47,7 @@ function App() {
               <Route path="/camera2" element={<CameraPage2 />} />
               <Route path="/camera3" element={<CameraPage3 />} />
               <Route path="/camera4" element={<AppWithImageCapture />} />
+              <Route path="/osmap" element={<OSMap />} />
               <Route path="/signal" element={<Signal />} />
             </Routes>
           </BrowserRouter>
