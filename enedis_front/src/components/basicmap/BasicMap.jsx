@@ -1,16 +1,16 @@
 import React, { useRef, useState, useContext } from "react";
-import { Map, TileLayer, Popup, Marker, MapContainer } from "react-leaflet";
+import { MapContainer, TileLayer, Popup, Marker } from "react-leaflet";
 import { MapCoordContext } from  "../../context/MapCoordContext.js";
 import osm from "./osm-providers.js";
 import markerIconPng from "../../assets/mapmarker-blue500.png";
-import 'leaflet/dist/leaflet.css';
-import {Icon} from 'leaflet';
+import "leaflet/dist/leaflet.css";
+import { Icon } from "leaflet";
 
 const BasicMap = () => {
-    const {latitude, longitude}=useContext( MapCoordContext);
-    const [center, setCenter] = useState({lat: latitude, lng: longitude});
-    const ZOOM_LEVEL = 9;
-    const mapRef = useRef();    
+  const { latitude, longitude } = useContext(MapCoordContext);
+  const [center, setCenter] = useState({ lat: latitude, lng: longitude });
+  const ZOOM_LEVEL = 9;
+  const mapRef = useRef();
 
     // React.useEffect(() => {
     //     map.locate().on("locationfound", function (e) {
@@ -26,7 +26,7 @@ const BasicMap = () => {
     return (
         <div className="BasicMap">
             <div className="col" style={{ width: '100vw', height: '100vw', margin: '0px', padding: '0px'}}>
-                <MapContainer 
+                <MapContainer
                 style={{ width: '100%', height: '100%' }}
                 center={center}
                 zoom={ZOOM_LEVEL}
@@ -40,7 +40,7 @@ const BasicMap = () => {
                         <Popup>
                             Le risque se situe ici
                         </Popup>
-                    </Marker> 
+                    </Marker>
                      <TileLayer
     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
