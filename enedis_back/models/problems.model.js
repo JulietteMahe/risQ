@@ -10,9 +10,9 @@ const validate = (data, forCreation = true) => {
         longitude:Joi.number().presence(presence),
         type_problem:Joi.number().integer().presence(presence),
         creator:Joi.number().integer().presence(presence),
-        state:Joi.number().integer().presence(presence),
+        state:Joi.number().integer().presence('required'),
         date_creation:Joi.date().presence(presence),
-        date_update:Joi.date().presence(presence),
+        date_update:Joi.date().presence('required'),
         message:Joi.string().presence(presence)
     }).validate(data, { abortEarly: false }).error;
 }
@@ -23,6 +23,9 @@ const findAll=()=>{
         .then(([result])=>{
             return result;
         })
+        .catch((err)=>{
+            console.log(err);
+        })
 }
 
 const findOne=(id)=>{
@@ -30,6 +33,9 @@ const findOne=(id)=>{
         .query("SELECT * FROM view_problem WHERE id_problem=?",[id])
         .then(([result])=>{
             return result[0];
+        })
+        .catch((err)=>{
+            console.log(err);
         })
 }
 
@@ -45,19 +51,25 @@ const create=(data)=>{
         })
 }
 
-const update=(id,data)=>{
+const update=(data,id)=>{
     return db
-        .query("",[data,id])
+        .query("UPDATE problems SET ? WHERE id_problem=?",[data,id])
         .then(([result])=>{
             return result.affectedRows!==0;
+        })
+        .catch((err)=>{
+            console.log(err);
         })
 }
 
 const destroy=(id)=>{
     return db
-        .query("",[id])
+        .query("DELETE FROM problems WHERE id_problem=?",[id])
         .then(([result])=>{
             return result.affectedRows!==0;
+        })
+        .catch((err)=>{
+            console.log(err);
         })
 }
 module.exports={
