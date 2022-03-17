@@ -8,9 +8,12 @@ const Home = () => {
     return (
         <div>
             <Geo />
-            <Link to="/camera1">test photo1</Link>
-            <Link to="/camera2">test photo2</Link>
-            <Link to="/camera3">test photo3</Link>
+            <ul>
+            <li><Link to="/camera1">test photo1</Link></li>
+            <li><Link to="/camera2">test photo2</Link></li>
+            <li><Link to="/camera3">test photo3</Link></li>
+            <li><Link to="/osmap">test map</Link></li>
+            </ul>
         </div>
     )
 }
