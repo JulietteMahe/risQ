@@ -18,7 +18,7 @@ const BasicMap = () => {
         className="col"
         style={{
           width: "100vw",
-          height: "100vh",
+          height: "90vh",
           margin: "0px",
           padding: "0px",
         }}
