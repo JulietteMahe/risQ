@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MapCoordContext } from '../../context/MapCoordContext';
+import { useUser } from "../../contexts/UserProvider";
 import axios from 'axios';
 import './FormSignal.css';
 
@@ -12,6 +13,7 @@ const FormSignal = () => {
     const [picture,setPicture] = useState();
     const Longitude=1.01;
     const latitude=2.02;
+    const {user}=useUser();
     useEffect(() => {
 
         const getProblemType = async () => {

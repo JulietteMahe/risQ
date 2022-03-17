@@ -30,20 +30,15 @@ const Login = () => {
     },
     onSubmit: (values) => {
       axios
-        .post(`${process.env.REACT_APP_API_URL}/users/login`, values)
-        .then(({ data: { credentials } }) => {
-          setUser({
-            token: credentials,
-          });
+        .post(`${process.env.REACT_APP_API_URL}auth`, values,{withCredentials:true})
+        .then((data) => {
+          setUser(data.userId);
           navigator("/");
         })
         .catch(
-          ({
-            response: {
-              data: { message },
-            },
-          }) => {
-            setError(message);
+          (err) => {
+            console.log(err);
+            //setError(message);
           }
         );
     },
