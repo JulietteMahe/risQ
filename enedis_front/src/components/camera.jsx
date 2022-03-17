@@ -1,4 +1,4 @@
-const Camera = (function () {
+const camera = (function () {
   let width = 0;
   let height = 0;
 
@@ -22,7 +22,7 @@ const Camera = (function () {
     context: null,
     canvas: null,
 
-    startCamera: function (w = 580, h = 480) {
+    startCamera: function (w = 680, h = 480) {
       if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         width = w;
         height = h;
@@ -50,4 +50,4 @@ const Camera = (function () {
   };
 })();
 
-export default Camera;
+export default camera;
