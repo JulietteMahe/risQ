@@ -97,6 +97,7 @@ router.post('/',upload.single('photo'),async(req,res)=>{
     const path = req.file.path;
     const errors=problem.validate(req.body);
     if(errors){
+        console.log(errors.details);
         return res.status(422).json({ validationErrors: errors.details });
     }
     const {longitude,latitude,state,message,type_problem,creator,date_creation,date_update}=req.body;
