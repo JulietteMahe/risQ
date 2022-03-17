@@ -1,8 +1,5 @@
 import React from "react";
 import logo from "../assets/logo_fondBleu.png";
-import logo_signaler from "../assets/logo_signaler.png";
-import logo_carte from "../assets/logo_carte.png";
-import logo_connexion from "../assets/logo_connexion.png";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
