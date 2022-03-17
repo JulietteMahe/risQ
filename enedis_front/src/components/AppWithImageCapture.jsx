@@ -25,7 +25,7 @@ export default function AppWithImageCapture() {
                 className="camera"
             />
             <a href={dataURI} download>
-                <img src={dataURI} alt="" className="photoTaken"/>
+                <img src={dataURI} alt="" className="photoTaken" onChange={(event) =>setPicture(event.target.files[0])}/>
             </a>
         </div>
     );

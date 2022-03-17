@@ -78,6 +78,7 @@ const FormSignal = () => {
 
     return (
         <div className='FormSignal'>
+            <div>
             <label htmlFor='TypeProblem' className='FormSignalLabel'>Type du problème : <select id="TypeProblem" value={problemType} onChange={(e) => setProblemType(e.target.value)}>
                 {typeProblems.map((typeProblem) => {
                     return (
@@ -92,6 +93,7 @@ const FormSignal = () => {
                     )
                 })}
             </select></label>
+            </div>
             <label htmlFor='Photo' className='FormSignalLabel'>Photo : <input type="file" id="Photo" onChange={(event) =>setPicture(event.target.files[0])} /> </label>
             <textarea onChange={(e) => setMessage(e.target.value)} value={message} className='FormSignalTextAera'/>
             <input type="button" value="Valider" onClick={handleSubmit}/>

@@ -1,6 +1,11 @@
+video {
+    height: 20vh;
+    width: 20vw;
+    object-fit: contain;
+}
+
 .photoTaken {
-    height: 20vw;
-    width: 35vw;
+    height: 40vw;
     background-color: powderblue;
 }
 
