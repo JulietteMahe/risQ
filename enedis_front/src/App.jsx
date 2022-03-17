@@ -14,7 +14,7 @@ import CameraPage3 from "./pages/CameraPage3";
 import AppWithImageCapture from "./components/AppWithImageCapture";
 import Home from "./pages/Home";
 import Signal from "./pages/Signal";
-import Nav from "./components/Navbar";
+import Navbar from "./components/Navbar";
 import "./App.css";
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
       <div className="App">
         <UserProvider>
           <BrowserRouter>
-            <Nav />
+            <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
