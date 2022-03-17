@@ -1,29 +1,20 @@
-import React, { useRef, useState }from "react";
-import { Map, TileLayer, Popup, Marker, useMapEvents } from "react-leaflet";
-import L from "leaflet";
+import React, { useRef, useState, useContext } from "react";
+import { Map, TileLayer, Popup, Marker } from "react-leaflet";
+import { MapCoordContext } from  "../../context/MapCoordContext.js";
 import osm from "./osm-providers.js";
-import mapmarker from "../../assets/mapmarker-blue500.png";
+import markerIconPng from "../../assets/mapmarker-blue500.png";
 import 'leaflet/dist/leaflet.css';
-
-/*function GetIcon(_iconSize) {
-    return L.icon({
-      iconUrl: require({mapmarker}),
-      iconSize: [_iconSize],
-    });
-}*/
-  
+import {Icon} from 'leaflet';
 
 const BasicMap = () => {
-    const [center, setCenter] = useState({lat: 48.52, lng: 2.19});
+    const {latitude, longitude}=useContext( MapCoordContext);
+    const [center, setCenter] = useState({lat: latitude, lng: longitude});
     const ZOOM_LEVEL = 9;
-    const mapRef = useRef();
-    
+    const mapRef = useRef();    
 
     return(
         <div className="BasicMap">
-            <h2>React-leaflet Basic Openstreet Maps</h2>
-            <p>Loading basic map using layer from maptiler</p>
-            <div className="col" style={{ width: '600px', height: '600px' }}>
+            <div className="col" style={{ width: '100vw', height: '100vw', margin: '0px', padding: '0px'}}>
                 <Map 
                 style={{ width: '100%', height: '100%' }}
                 center={center}
@@ -33,7 +24,7 @@ const BasicMap = () => {
                     <TileLayer url={osm.maptiler.url} attribution={osm.maptiler.attribution} />
                     <Marker 
                     position={center}
-                    
+                    icon={new Icon({iconUrl: markerIconPng, iconSize: [30, 30], iconAnchor: [12, 41]})}
                     >
                         <Popup>
                             Le risque se situe ici
@@ -46,20 +37,3 @@ const BasicMap = () => {
 };
 
 export default BasicMap;
-
-/*    const map = useMapEvents({
-        click() {
-            map.locate()
-        },
-        locationfound(e) {
-            setPosition(e.latlng)
-            map.flyTo(e.latlng, map.getZoom())
-        },
-    })
-
-    return position === null ? null : (
-        <Marker position={position}>
-            <Popup>Vous êtes ici</Popup>
-        </Marker>
-    )*/
-    /*Dans un autre composant ou dans celui-là?*/

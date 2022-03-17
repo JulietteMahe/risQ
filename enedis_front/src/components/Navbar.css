@@ -1,0 +1,20 @@
+.navbar, .navbar span {
+    background-color: #1423DC;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    text-decoration: none;
+    color: white;
+}
+
+.navbarLogoContainer {
+    height: 8vh;
+    width: auto;
+}
+
+.navbarLogo {
+    width: 100%;
+    height: 100%;
+}
