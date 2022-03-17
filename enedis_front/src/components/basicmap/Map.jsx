@@ -27,13 +27,12 @@ const Map = () => {
     return (
         <MapContainer className="markercluster-map" //whenCreated={map => setMap({ map })}
             center={[48.856614, 2.3522219]} // paris
-            style={{ width: '100vw', height: '90vh', margin: '0px', padding: '0px'}}
+            style={{ width: '250px', height: '250px', margin: '10px', padding: '0px'}}
             zoom={4}
             maxZoom={16} >
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             />
-
             <Markers />
             <LocationMarker />
         </MapContainer>
