@@ -1,7 +1,7 @@
 import React from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import Markers from "./Markers";
-import visitorIcon from "./constants";
+import {visitorIcon} from "./constants";
 import "leaflet/dist/leaflet.css";
 
 const Map = () => {
@@ -29,7 +29,7 @@ const Map = () => {
             center={[48.856614, 2.3522219]} // paris
             style={{ width: '250px', height: '250px', margin: '10px', padding: '0px'}}
             zoom={4}
-            maxZoom={16} >
+            maxZoom={18} >
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             />
