@@ -16,6 +16,7 @@ import Home from "./pages/Home";
 import Signal from "./pages/Signal";
 import Navbar from "./components/Navbar";
 import "./App.css";
+import FormSignal from "./components/formsignal/FormSignal.jsx";
 
 function App() {
   const [latitude, setLatitude] = React.useState("");
