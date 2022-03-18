@@ -1,3 +1,9 @@
+.Map {
+    width: 90%;
+    margin: 10px;
+}
+
 .markercluster-map {
-  height: 90vh;
+    height: 250px;
+    margin: 10px;
 }
