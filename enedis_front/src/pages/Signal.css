@@ -19,11 +19,14 @@
   margin-top: 10px;
   padding-top: 10px;
   border-radius: 5px;
+  box-shadow: 2px 2px 4px 0px #888;
+    -webkit-box-shadow: 2px 2px 4px 0px #888;
+    -moz-box-shadow: 2px 2px 4px 0px #888;
 }
 
 .signalTitle {
-    font-size: 18px;
-    color: var(--blue-500);
-    font-weight: 600;
-    margin: 10px;
+  font-size: 20px;
+  color: var(--blue-500);
+  font-weight: 700;
+  margin: 10px;
 }
