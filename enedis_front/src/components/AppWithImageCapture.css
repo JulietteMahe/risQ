@@ -7,21 +7,8 @@
 video {
     height: 40vw;
     border-radius: 5px;
+    margin-top: 10px;
 }
-
-/* #inner-circle {
-    width: 1em;
-    height: 1em;
-    background-color: var(--green-500);
-    margin-left: 1px;
-}
-
-#outer-circle {
-    margin-left: 5vw;
-    margin-top: 5vh;
-    width: 2em;
-    height: 2em;
-} */
 
 #inner-circle {
     background-color: var(--green-500);
@@ -32,7 +19,7 @@ video {
 }
 
 #outer-circle {
-    left: -20px;
+    left: -15px;
     top : 50px;
     height: 30px;
     width: 30px;

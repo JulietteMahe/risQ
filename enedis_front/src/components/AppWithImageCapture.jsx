@@ -5,6 +5,7 @@ import "./AppWithImageCapture.css";
 
 export default function AppWithImageCapture() {
     const [dataURI, setdataURI] = useState("");
+    const [picture, setPicture] = useState("");
     return (
         <div className="AppWithImageCapture">
             <Camera
@@ -25,7 +26,7 @@ export default function AppWithImageCapture() {
                 className="camera"
             />
             <a href={dataURI} download>
-                <img src={dataURI} alt="" className="photoTaken"/>
+                <img src={dataURI} alt="" className="photoTaken" onChange={(event) =>setPicture(event.target.files[0])}/>
             </a>
         </div>
     );

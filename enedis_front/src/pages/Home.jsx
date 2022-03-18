@@ -1,25 +1,18 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Geo from '../components/Geo';
-import Navbar from '../components/Navbar';
 import Fondamentaux from './Fondamentaux.jsx';
 import './Home.css';
 
 const Home = () => {
     return (
         <div className='home'>
-          <Navbar />
+            <div className='Welcome'>
+                <p className='welcomeTitle'>Bienvenue sur votre application sécurité</p>
+                <p className='welcomeText'>Signalez les risques sur vos lieux d'intervention</p>
+                <p className='welcomeText'>Signalez les risques sur vos lieux d'intervention</p>
+            </div>
             <Fondamentaux />
-            <Geo />
-            <ul>
-            <li><Link to="/camera1">test photo1</Link></li>
-            <li><Link to="/camera2">test photo2</Link></li>
-            <li><Link to="/camera3">test photo3</Link></li>
-            <li><Link to="/camera4">test photo4</Link></li>
-            <li><Link to="/osmap">test map</Link></li>
-            <li><Link to="/camera4">test photo4</Link></li>
-            </ul>
         </div>
     )
 }

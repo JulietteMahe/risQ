@@ -1,13 +1,29 @@
 .Signal {
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .signalContainer {
-  width: 100vw;
-  height: 100vh;
+  width: 85%;
+  height: 85%;
   display: flex;
-  flex-wrap: wrap-reverse;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-color: var(--neutral-50);
   padding-bottom: 50px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-radius: 5px;
+}
+
+.signalTitle {
+    font-size: 18px;
+    color: var(--blue-500);
+    font-weight: 600;
+    margin: 10px;
 }
