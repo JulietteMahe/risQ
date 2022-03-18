@@ -19,11 +19,40 @@
     margin-top: 10px;
     padding-top: 10px;
     border-radius: 5px;
-  }
+    box-shadow: 2px 2px 4px 0px #888;
+    -webkit-box-shadow: 2px 2px 4px 0px #888;
+    -moz-box-shadow: 2px 2px 4px 0px #888;
+}
+
+.risqMapText {
+    padding-bottom: 20px;
+}
 
 .risqMapTitle {
-    font-size: 18px;
+    font-size: 20px;
     color: var(--blue-500);
-    font-weight: 600;
+    font-weight: 700;
     margin: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.risqMapTop {
+    font-size: 14px;
+    color: var(--neutral-900);
+    font-weight: 500;
+    margin: 10px;
+}
+
+.risqTop {
+    font-size: 14px;
+    color: var(--neutral-900);
+    font-weight: 500;
+    margin: 10px;
+}
+
+.mainTop {
+    font-size: 14px;
+    color: var(--blue-500);
+    font-weight: 700;
 }

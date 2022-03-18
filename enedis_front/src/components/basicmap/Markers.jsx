@@ -9,7 +9,7 @@ import 'react-leaflet-markercluster/dist/styles.min.css'
 // Message ou Type_problem ?
 const exampleData = [
     [ // Juliette lat 48.121791 long -1.6820842
-        { latitude: 48.121000, longitude: -1.6897, message: "Cable tombé au sol" },
+        { latitude: 48.121000, longitude: -1.6821, message: "Cable tombé au sol" },
         { latitude: 48.121097, longitude: -1.6800, message: "Armoire électrique ouverte" },
         { latitude: 48.121257, longitude: -1.6819, message: "Branche trop près de la ligne" }
     ],
