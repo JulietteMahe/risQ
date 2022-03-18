@@ -10,10 +10,11 @@
 .FormSignalLabel {
   margin: 10px;
   width: 100%;
+  font-size: 0.7em;
 }
 
 .FormSignalTextAera {
   margin: 10px;
   width: 100%;
-  min-height: 150px;
+  min-height: 4rem;
 }
