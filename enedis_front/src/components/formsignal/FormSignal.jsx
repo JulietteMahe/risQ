@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { MapCoordContext } from '../../context/MapCoordContext';
 import { useUser } from "../../contexts/UserProvider";
 import axios from 'axios';
 import './FormSignal.css';
@@ -78,11 +77,11 @@ const FormSignal = () => {
 
     return (
         <div className='FormSignal'>
-            <div>
+            <label htmlFor='Photo' className='FormSignalPhoto'>Ajouter une photo <input className='PhotoInput' type="file" id="Photo" onChange={(event) =>setPicture(event.target.files[0])} /> </label>
             <label htmlFor='TypeProblem' className='FormSignalLabel'>Type du problème : <select id="TypeProblem" value={problemType} onChange={(e) => setProblemType(e.target.value)}>
                 {typeProblems.map((typeProblem) => {
                     return (
-                        <option value={typeProblem.id_type} key={typeProblem.id_type}>{typeProblem. name } </option>
+                        <option value={typeProblem.id_type} key={typeProblem.id_type}>{typeProblem.name } </option>
                     )
                 })}
             </select></label>
@@ -93,10 +92,8 @@ const FormSignal = () => {
                     )
                 })}
             </select></label>
-            </div>
-            <label htmlFor='Photo' className='FormSignalLabel'>Photo : <input type="file" id="Photo" onChange={(event) =>setPicture(event.target.files[0])} /> </label>
             <textarea onChange={(e) => setMessage(e.target.value)} value={message} className='FormSignalTextAera'/>
-            <input type="button" value="Valider" onClick={handleSubmit}/>
+            <input className='FormSignalButton' type="button" value="Valider" onClick={handleSubmit}/>
         </div>
     )
 }

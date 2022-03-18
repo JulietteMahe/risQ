@@ -5,6 +5,7 @@ import "./AppWithImageCapture.css";
 
 export default function AppWithImageCapture() {
     const [dataURI, setdataURI] = useState("");
+    const [picture, setPicture] = useState("");
     return (
         <div className="AppWithImageCapture">
             <Camera

@@ -1,6 +1,6 @@
 .imageFondamentaux {
-  height: 39vh;
+  height: auto;
   width: 95vw;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-top: 4vw;
 }

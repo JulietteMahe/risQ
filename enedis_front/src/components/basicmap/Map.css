@@ -1,9 +1,11 @@
 .Map {
     width: 90%;
     margin: 10px;
+    border-radius: 5px;
 }
 
 .markercluster-map {
     height: 250px;
-    margin: 10px;
+    margin: 15px;
+    border-radius: 5px;
 }

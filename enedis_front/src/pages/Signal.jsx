@@ -8,9 +8,10 @@ function Signal() {
   return (
     <div className="Signal">
       <div className="signalContainer">
-        <FormSignal />
+        <p className="signalTitle">Signaler un risque</p>
+        <Map />        
         <AppWithImageCapture />
-        <Map />
+        <FormSignal />        
       </div>
     </div>
   );
