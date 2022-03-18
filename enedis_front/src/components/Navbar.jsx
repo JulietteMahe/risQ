@@ -22,7 +22,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbarImgContainer">
-        <Link to="/signal">
+        <Link to="/risq-map">
           <svg width="2em" height="2em" viewBox="0 0 24 24">
             <path
               fill="#fff"
