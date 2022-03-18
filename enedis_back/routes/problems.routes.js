@@ -94,7 +94,14 @@ router.get('/:id',async(req,res)=>{
 })
 
 router.post('/',upload.single('photo'),async(req,res)=>{
-    const path = req.file.path;
+    let path='';
+    try{
+        let path = req.file.path;
+    }
+    catch(err){
+      //  console.log(err);
+        path='uploads/toto';
+    }
     const errors=problem.validate(req.body);
     if(errors){
         console.log(errors.details);

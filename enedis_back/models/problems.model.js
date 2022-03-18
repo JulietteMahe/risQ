@@ -13,6 +13,7 @@ const validate = (data, forCreation = true) => {
         state:Joi.number().integer().presence('required'),
         date_creation:Joi.date().presence(presence),
         date_update:Joi.date().presence('required'),
+        photo:Joi.string().required('optional'),
         message:Joi.string().presence(presence)
     }).validate(data, { abortEarly: false }).error;
 }
