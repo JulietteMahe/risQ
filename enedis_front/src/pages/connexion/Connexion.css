@@ -7,7 +7,7 @@
   height: 350px;
   background-color: var(--blue-500);
   color: var(--green-200) !important;
-  margin: 150px auto;
+  margin: 150px;
   border-radius: 10px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
 }
@@ -31,9 +31,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 340px;
+  width: 100%;
   height: 350px;
-  margin: 150px auto;
+  margin: 150px;
   text-align: center;
   border-radius: 5px;
   color: var(--neutral-50);
@@ -41,7 +41,7 @@
 }
 .login-form > h1,
 .register-form > h1 {
-  text-transform: uppercase;
+  font-size: 24px;
   margin-bottom: 15px;
 }
 
@@ -54,10 +54,12 @@
 .register-input {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  width: 100%;
+  width: 80%;
   padding: 12px;
-  margin: 15px auto;
+  margin: 15px;
   border: none;
   outline: none;
   box-shadow: inset 1px 0px 10px 1px #888;
