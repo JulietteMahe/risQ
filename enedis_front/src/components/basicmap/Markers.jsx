@@ -1,7 +1,7 @@
 import React from "react";
 import { Marker, Popup } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-markercluster";
-import {risqIcon} from "./constants";
+import {risQmarker} from "./constants";
 import 'leaflet/dist/leaflet.css';
 import 'react-leaflet-markercluster/dist/styles.min.css'
 // import axios from "axios";
@@ -42,7 +42,7 @@ export default function Markers(props) {
     return (
         <MarkerClusterGroup>
             {markers.map(marker =>
-                <Marker position={[marker.latitude, marker.longitude]} icon={risqIcon}><Popup>{marker.message}</Popup></Marker>
+                <Marker position={[marker.latitude, marker.longitude]} icon={risQmarker}><Popup>{marker.message}</Popup></Marker>
             )}
         </MarkerClusterGroup>
     );

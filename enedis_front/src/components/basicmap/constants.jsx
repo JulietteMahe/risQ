@@ -1,7 +1,7 @@
 import L from "leaflet";
 import icon from "leaflet/dist/images/marker-icon.png"
 import shadow from "leaflet/dist/images/marker-shadow.png"
-import redIcon from "../../assets/marker-icon-red22.png"
+import mapmarker from "../../assets/mapmarker-blue500.png"
 
 export const visitorIcon = L.icon({
   iconSize: [25, 41],
@@ -11,10 +11,10 @@ export const visitorIcon = L.icon({
   shadowUrl: shadow
 });
 
-export const risqIcon = L.icon({
+export const risQmarker = mapmarker({
   iconSize: [25, 41],
   iconAnchor: [10, 41],
   popupAnchor: [2, -40],
-  iconUrl: redIcon,
+  iconUrl: risQmarker,
   shadowUrl: shadow
 });
