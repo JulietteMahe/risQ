@@ -2,7 +2,7 @@
   position: absolute;
   bottom: 0;
   background-color: var(--blue-500);
-  min-width: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;

@@ -1,7 +1,7 @@
 import React from "react";
 import { Marker, Popup } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-markercluster";
-import visitorIcon from "./constants";
+import {visitorIcon} from "./constants";
 import 'leaflet/dist/leaflet.css';
 import 'react-leaflet-markercluster/dist/styles.min.css'
 // import axios from "axios";
@@ -18,10 +18,10 @@ const exampleData = [
         { latitude: 48.121097, longitude: -1.6800, message: "Armoire électrique ouverte" },
         { latitude: 48.121257, longitude: -1.6819, message: "Branche trop près de la ligne" }
     ],
-    [ // Sylvain
-        { latitude: 49.0200, longitude: 4.0297, message: "Cable tombé au sol" },
-        { latitude: 49.0297, longitude: 4.0000, message: "Armoire électrique ouverte" },
-        { latitude: 49.0257, longitude: 4.0019, message: "Branche trop près de la ligne" }
+    [ // Sylvain Latitude: 49.042298  Longitude: 3.9547382
+        { latitude: 49.043470, longitude: 3.9560000, message: "Cable tombé au sol" },
+        { latitude: 49.040697, longitude: 3.9526000, message: "Armoire électrique ouverte" },
+        { latitude: 49.041057, longitude: 3.9591559, message: "Branche trop près de la ligne" }
     ]
 ]
 

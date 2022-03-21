@@ -1,13 +1,13 @@
 .connexion {
+  width: 80%;
+  height: 70%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  width: 340px;
-  height: 350px;
-  color: var(--blue-500);
-  background: var(--neutral-50);
-  margin: 150px auto;
+  align-items: center;
+  background-color: var(--blue-500);
+  color: var(--green-200) !important;
+  margin: 50px;
   border-radius: 10px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
 }
@@ -33,9 +33,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 340px;
+  width: 80%;
   height: 350px;
-  margin: 150px auto;
+  margin: 50px;
   text-align: center;
   border-radius: 5px;
   color: var(--blue-500);
@@ -43,7 +43,7 @@
 }
 .login-form > h1,
 .register-form > h1 {
-  text-transform: uppercase;
+  font-size: 24px;
   margin-bottom: 15px;
 }
 
@@ -56,6 +56,8 @@
 .register-input {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   width: 80%;
   padding: 12px;
