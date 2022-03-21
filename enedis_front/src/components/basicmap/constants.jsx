@@ -11,10 +11,4 @@ export const visitorIcon = L.icon({
   shadowUrl: shadow
 });
 
-export const risQmarker = mapmarker({
-  iconSize: [25, 41],
-  iconAnchor: [10, 41],
-  popupAnchor: [2, -40],
-  iconUrl: risQmarker,
-  shadowUrl: shadow
-});
+
